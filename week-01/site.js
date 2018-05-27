@@ -86,6 +86,9 @@ members.addEventListener('click', function(e) {
         // TODO: Insert the parts of the JSON data we want in the `template` HTML and
         // append it to the profile `<blockquote id="profile">`
         console.log('Name', profile_json.name);
+        if (!profile_json.name) {
+          console.log('No profile name found. Using '+ profile_json.login +' instead.');
+        }
         console.log('Avatar URL', profile_json.avatar_url);
         console.log('Public Repos', profile_json.public_repos);
         // TODO: Display the username (`login`) in case a team member has not set a profile name
