@@ -73,7 +73,7 @@ members.addEventListener('click', function(e) {
 
     // This block commented with stars so you can get things above working first:
 
-    /*
+
     fetch(request_url)
       .then(function(data) {
         // Parse the returned data as JSON:
@@ -85,8 +85,11 @@ members.addEventListener('click', function(e) {
 
         // TODO: Insert the parts of the JSON data we want in the `template` HTML and
         // append it to the profile `<blockquote id="profile">`
+        console.log('Name', profile_json.name);
+        console.log('Avatar URL', profile_json.avatar_url);
+        console.log('Public Repos', profile_json.public_repos);
         // TODO: Display the username (`login`) in case a team member has not set a profile name
       });
-    */
+
   }
 });
