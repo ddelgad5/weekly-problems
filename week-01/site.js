@@ -88,12 +88,17 @@ members.addEventListener('click', function(e) {
 
         console.log(template.content.children);
         console.log('Name', profile_json.name);
+        document.getElementById('name').innerHTML = profile_json.name;
+
+        console.log('Avatar URL', profile_json.avatar_url);
+
+        console.log('Public Repos', profile_json.public_repos);
+
+
+        // TODO: Display the username (`login`) in case a team member has not set a profile name
         if (!profile_json.name) {
           console.log('No profile name found. Using '+ profile_json.login +' instead.');
         }
-        console.log('Avatar URL', profile_json.avatar_url);
-        console.log('Public Repos', profile_json.public_repos);
-        // TODO: Display the username (`login`) in case a team member has not set a profile name
       });
 
   }
