@@ -85,6 +85,8 @@ members.addEventListener('click', function(e) {
 
         // TODO: Insert the parts of the JSON data we want in the `template` HTML and
         // append it to the profile `<blockquote id="profile">`
+
+        console.log(template.content.children);
         console.log('Name', profile_json.name);
         if (!profile_json.name) {
           console.log('No profile name found. Using '+ profile_json.login +' instead.');
