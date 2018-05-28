@@ -87,7 +87,12 @@ members.addEventListener('click', function(e) {
         // TODO: Insert the parts of the JSON data we want in the `template` HTML and
         // append it to the profile `<blockquote id="profile">`
         console.log('Name', profile_json.name);
-        template.content.children[0].appendChild(document.createTextNode(profile_json.name));
+        if (!profile_json.name) {
+          console.log('No profile name found. Using '+ profile_json.login +' instead.');
+          template.content.children[0].appendChild(document.createTextNode(profile_json.login));
+
+        }
+        else template.content.children[0].appendChild(document.createTextNode(profile_json.name));
 
         console.log('Avatar URL', profile_json.avatar_url);
         template.content.children[1].src = profile_json.avatar_url;
@@ -98,9 +103,6 @@ members.addEventListener('click', function(e) {
         //Log template
         console.log(template.content.children);
         // TODO: Display the username (`login`) in case a team member has not set a profile name
-        if (!profile_json.name) {
-          console.log('No profile name found. Using '+ profile_json.login +' instead.');
-        }
 
         //cleanup template
         console.log("Cleaning up template");
@@ -109,7 +111,6 @@ members.addEventListener('click', function(e) {
         template.content.children[2].firstElementChild.childNodes[0].remove();
         console.log("Template cleaned");
         console.log(template.content.children);
-
       });
 
   }
