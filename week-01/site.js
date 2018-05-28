@@ -101,6 +101,15 @@ members.addEventListener('click', function(e) {
         if (!profile_json.name) {
           console.log('No profile name found. Using '+ profile_json.login +' instead.');
         }
+
+        //cleanup template
+        console.log("Cleaning up template");
+        template.content.children[0].childNodes[0].remove();
+        template.content.children[1].src = "";
+        template.content.children[2].firstElementChild.childNodes[0].remove();
+        console.log("Template cleaned");
+        console.log(template.content.children);
+
       });
 
   }
