@@ -110,7 +110,7 @@ members.addEventListener('click', function(e) {
         //  Append items to #profile
         profile.append(template.content.getElementById('name'));
         profile.append(template.content.getElementById('avatar_url'));
-        // console.log(template.content.getElementsByTagName("p"));
+        profile.append(template.content);
       });
 
   }
