@@ -111,6 +111,9 @@ members.addEventListener('click', function(e) {
         profile.append(template.content.getElementById('name'));
         profile.append(template.content.getElementById('avatar_url'));
         profile.append(template.content);
+
+        //  Log template post-append
+        console.log(template.content.children);
       });
 
   }
