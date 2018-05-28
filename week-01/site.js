@@ -125,4 +125,4 @@ var cleanProfile = function() {
     console.log("#profile cleaned");
   }
   else console.log("#profile is already empty");
-}
+};
