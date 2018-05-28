@@ -89,8 +89,10 @@ members.addEventListener('click', function(e) {
         template.content.children[0].appendChild(document.createTextNode(profile_json.name));
 
         console.log('Avatar URL', profile_json.avatar_url);
+        template.content.children[1].src = profile_json.avatar_url;
 
         console.log('Public Repos', profile_json.public_repos);
+        template.content.children[2].firstElementChild.appendChild(document.createTextNode(profile_json.public_repos));
 
         //Log template
         console.log(template.content.children);
