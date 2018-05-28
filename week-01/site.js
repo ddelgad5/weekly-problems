@@ -39,7 +39,7 @@ members.addEventListener('click', function(e) {
   // Grab the content template from the HTML;
   // see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
   var mainTemplate = document.getElementById('member');
-  var template = mainTemplate;
+  var template = mainTemplate.cloneNode(true);
   // Also grab a reference to the `<blockquote>` element where the data will go:
   var profile = document.getElementById('profile');
 
@@ -105,13 +105,10 @@ members.addEventListener('click', function(e) {
         //  Log template
         console.log(template.content.children);
 
-        //  Cleanup template
-        console.log("Cleaning up template");
-        template.content.children[0].childNodes[0].remove();
-        template.content.children[1].src = "";
-        template.content.children[2].firstElementChild.childNodes[0].remove();
-        console.log("Template cleaned");
-        console.log(template.content.children);
+        //  Append items to #profile
+        profile.append(template.content.getElementById('name'));
+        profile.append(template.content.getElementById('avatar_url'));
+        // console.log(template.content.getElementsByTagName("p"));
       });
 
   }
