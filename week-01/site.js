@@ -38,7 +38,8 @@ members.addEventListener('click', function(e) {
   var username, request_url;
   // Grab the content template from the HTML;
   // see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
-  var template = document.getElementById('member');
+  var mainTemplate = document.getElementById('member');
+  var template = mainTemplate;
   // Also grab a reference to the `<blockquote>` element where the data will go:
   var profile = document.getElementById('profile');
 
