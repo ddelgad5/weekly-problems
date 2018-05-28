@@ -34,6 +34,8 @@ var target;
 // Listen for a click event on #members, rather than adding a click handler to each and every
 // <a> element. This is called event bubbling:
 members.addEventListener('click', function(e) {
+  //  clean #profile
+  cleanProfile();
   // Placeholder variables assigned in the `if` block below; life would be better with `let`
   var username, request_url;
   // Grab the content template from the HTML;
@@ -113,3 +115,14 @@ members.addEventListener('click', function(e) {
 
   }
 });
+
+var cleanProfile = function() {
+  if (document.getElementById('profile').children.length) {
+    console.log("Cleaning #profile");
+    while (document.getElementById('profile').firstChild) {
+      document.getElementById('profile').removeChild(document.getElementById('profile').firstChild);
+    }
+    console.log("#profile cleaned");
+  }
+  else console.log("#profile is already empty");
+}
