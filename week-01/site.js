@@ -94,17 +94,18 @@ members.addEventListener('click', function(e) {
         }
         else template.content.children[0].appendChild(document.createTextNode(profile_json.name));
 
+        //  Add avatar url
         console.log('Avatar URL', profile_json.avatar_url);
         template.content.children[1].src = profile_json.avatar_url;
 
+        //  Add public repo count
         console.log('Public Repos', profile_json.public_repos);
         template.content.children[2].firstElementChild.appendChild(document.createTextNode(profile_json.public_repos));
 
-        //Log template
+        //  Log template
         console.log(template.content.children);
-        // TODO: Display the username (`login`) in case a team member has not set a profile name
 
-        //cleanup template
+        //  Cleanup template
         console.log("Cleaning up template");
         template.content.children[0].childNodes[0].remove();
         template.content.children[1].src = "";
