@@ -9,6 +9,10 @@ const options = {
   // TODO: Create an object literal to hit your account on the GitHub API,
   // and pass any other information the API requires (you should not have
   // to authenticate for this, however)
+  url:"https://api.github.com/users/ddelgad5",
+  headers:  {
+    'User-Agent': 'Request-Promise'
+  }
 };
 
 req(options)
