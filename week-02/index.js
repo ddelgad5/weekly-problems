@@ -20,6 +20,11 @@ req(options)
     // TODO: Handle the returned JSON data and write it to a file called
     // `response.json` in your `week-two/` directory
     function(results) {
+      fs.writeFile('response.json', results, (err) => {
+        if (err) {
+          throw err;
+        }
+      });
       console.log('Request successful!');
     }
   )
