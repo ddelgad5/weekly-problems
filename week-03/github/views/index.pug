@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
-=======
 doctype html
 html(lang='en')
   head
     title ITMD 469 Week Three Problem
+  block content
+    h1= title
+    p Welcome to #{title}
   body
     header
       h1 #{name}
     main
     img(src=avatar)
     p Public repositories: #{repos}
-
     footer
       small Last updated: #{updated_at}
->>>>>>> c8b692a9b8328f5297cadaa4d6d44b489d10fd88
