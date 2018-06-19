@@ -13,3 +13,43 @@ and consider the pretty dead-simple documentation of our old example friend, the
 case, the endpoints for GitHub Issues: <https://developer.github.com/v3/issues/>
 
 As always, post to Basecamp as you’re working on this problem.
+
+GET /instructors
+{  
+  "metadata" {
+    "semester": "Fall 2018",
+    "last-update": "2018-06-18 12:00:00"    
+  },
+  "data" [
+    {
+      "type": "professor",
+      "id": "kstolley",
+      "name": "Karl Stolley",
+      "office": "SB 223",
+      "email": "karl.stolley@gmail.com",
+      "courses" [
+        {
+          "crn": 19984,
+          "link": "/courses/19984"
+        },
+        {
+          "crn": 19985,
+          "link": "/courses/19984"
+        }
+      ]
+    },
+    {
+      "type": "professor",
+      "id": "mlee",
+      "name": "Michael Lee",
+      "office": "SB 112J",
+      "email": "mlee@iit.edu",
+      "courses" [
+        {
+          "crn": 11044,
+          "link": "/courses/11044"
+        }
+      ]
+    }
+  ]
+}
