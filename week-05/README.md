@@ -34,7 +34,7 @@ GET /instructors
         },
         {
           "crn": 19985,
-          "link": "/courses/19984"
+          "link": "/courses/19985"
         }
       ]
     },
