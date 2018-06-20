@@ -29,12 +29,12 @@ GET /instructors
       "email": "karl.stolley@gmail.com",
       "courses" [
         {
-          "crn": 19984,
-          "link": "/courses/19984"
+          "courseName": "ITMD361-01",
+          "link": "/courses/ITMD361-01"
         },
         {
-          "crn": 19985,
-          "link": "/courses/19985"
+          "courseName": "ITMD361-02",
+          "link": "/courses/ITMD361-02"
         }
       ]
     },
@@ -46,8 +46,8 @@ GET /instructors
       "email": "mlee@iit.edu",
       "courses" [
         {
-          "crn": 11044,
-          "link": "/courses/11044"
+          "courseName": CS351-01,
+          "link": "/courses/CS351-01"
         }
       ]
     }
