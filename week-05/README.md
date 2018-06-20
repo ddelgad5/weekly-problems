@@ -50,6 +50,77 @@ GET /instructors
           "link": "/courses/CS351-01"
         }
       ]
+    },
+    {
+      ...
+    },
+    {
+      ... the rest of the instructors for the semester ...
+    },
+    {
+      ...
+    }
+  ]
+}
+
+GET /courses
+{
+  "metadata" {
+    "semester": "Fall 2018",
+    "last-update": "2018-06-18 18:00:00Z"    
+  },
+  "data" [
+    {
+      "type": "lecture",
+      "id": "CS351-01",
+      "crn": 10910,
+      "instructor" {
+        "name": "Michael Lee",
+        "link": "/instructors/mlee"
+      },
+      "credits": 3.000,
+      "subject": "CS",
+      "section": "01",
+      "campus": "Mies",
+      "tite": "Systems Programming",
+      "days" {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true
+      },
+      "seats": 30,
+      "enrolled": 30,
+      "free": 0,
+      "waitlisted": 7,
+      "time" {
+        "globalStart": 18:50:00Z,
+        "globalEnd": 20:05:00Z,
+        "localStart": 13:50:00,
+        "localEnd": 15:05:00,
+        "duration": 01:15:00
+      },
+      "location" {
+        "short": "PS 111",
+        "long": "Robert A. Pritzker Science Center, Room 111",
+        "building": "Pritzker Science Center",
+        "room": "111"
+      },
+      "dates" {
+        "start": 2018-08-20,
+        "end": 2018-12-01,
+        "duration": "16 weeks"
+      }
+    },
+    {
+      ...
+    },
+    {
+      ... the rest of classes for the semester ...
+    },
+    {
+      ...
     }
   ]
 }
