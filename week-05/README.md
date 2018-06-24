@@ -117,7 +117,7 @@ GET /courses
   ]
 }
 
-GET /subject
+GET /subjects
 {
   "metadata" {
     "semester": "Fall 2018",
