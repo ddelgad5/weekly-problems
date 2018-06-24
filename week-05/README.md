@@ -83,22 +83,14 @@ GET /courses
       "section": "01",
       "campus": "Mies",
       "tite": "Systems Programming",
-      "days" {
-        "monday": false,
-        "tuesday": false,
-        "wednesday": true,
-        "thursday": false,
-        "friday": true
-      },
+      "days": [Monday,Wednesday,Friday],
       "seats": 30,
       "enrolled": 30,
       "free": 0,
       "waitlisted": 7,
       "time" {
-        "globalStart": 18:50:00Z,
-        "globalEnd": 20:05:00Z,
-        "localStart": 13:50:00,
-        "localEnd": 15:05:00,
+        "start": 13:50:00,
+        "end": 15:05:00,
         "duration": 01:15:00
       },
       "location" {
@@ -121,6 +113,50 @@ GET /courses
     },
     {
       ...
+    }
+  ]
+}
+
+GET /subject
+{
+  "metadata" {
+    "semester": "Fall 2018",
+    "last-update": "2018-06-18 18:00:00Z"   
+  },
+  "data" [
+    {
+      "type": "subject",
+      "id": "CS",
+      "longID": "Computer Science",
+      "courses" [
+        {
+          "courseID": "CS351-01",
+          "link": "/courses/CS351-01"
+        },
+        {
+          "courseID": "CS351-02",
+          "link": "/courses/CS351"
+        }
+      ]
+    },
+    {
+      "type": subject,
+      "id": "ITM",
+      "longID": "Information Technology and Management",
+      "courses" [
+        {
+          "courseID": "ITM100-01".
+          "link": "courses/ITM100-01"
+        },
+        {
+          "courseID": "ITM301-01".
+          "link": "courses/ITM301-01"
+        },
+        {
+          "courseID": "ITM311-01".
+          "link": "courses/ITM311-01"
+        }
+      ]
     }
   ]
 }
